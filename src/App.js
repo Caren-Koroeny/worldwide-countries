@@ -6,17 +6,17 @@ import NavBar from './components/NavBar';
 import CountryDetails from './components/CountryDetails';
 import Footer from './components/Footer';
 
-const  App = () => {
+function App() {
   return (
     <div className="App">
-    <NavBar />
-    <Routes>
-      <Route path="/" element={<ContinentsPage/>} />
-      <Route path="/:name" element={<Countries />} />
-      <Route path="/:name/:id" element={<CountryDetails />} />
-    </Routes>
-    <Footer />
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<ContinentsPage />} />
+        <Route path="/:name" element={<Countries />} />
+        <Route path="/:name/:id" element={<CountryDetails />} />
+      </Routes>
+      <Footer />
     </div>
-  )
+  );
 }
 export default App;

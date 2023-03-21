@@ -1,7 +1,5 @@
-const Countries = () => {
-    return ( 
-        <h2>Countries</h2>
-     );
+function Countries() {
+  return <h2>Countries</h2>;
 }
- 
+
 export default Countries;
