@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 import continentsData from '../data/data';
 import { getCountries } from '../redux/countries/countriesSlice';
-import { Link } from 'react-router-dom';
 
-const Continents= () => {
+function Continents() {
   const dispatch = useDispatch();
   const handleClick = (name) => {
     dispatch(getCountries(name));

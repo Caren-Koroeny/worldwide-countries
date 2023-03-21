@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getCountries } from '../redux/countries/countries';
+import { getCountries } from '../redux/countries/countriesSlice';
 import Continents from './Continents';
 
-
-const ContinentsPage = () => {
+function ContinentsPage() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCountries());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -24,6 +24,6 @@ const ContinentsPage = () => {
       <Continents />
     </>
   );
-};
+}
 
 export default ContinentsPage;
